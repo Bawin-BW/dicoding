@@ -9,9 +9,9 @@ def create_product_sell_df(df):
     product_sell_df = df.groupby('product_category_name_english')['customer_id'].nunique().reset_index().sort_values(by='customer_id', ascending=False)
     return product_sell_df
 
-orders_dataset = pd.read_csv("./data/order_dataset.csv")
-accepted_time = pd.read_csv("./data/accepted_time.csv")
-delivery_time = pd.read_csv("./data/delivery_time.csv")
+orders_dataset = pd.read_csv("../data/order_dataset.csv")
+accepted_time = pd.read_csv("../data/accepted_time.csv")
+delivery_time = pd.read_csv("../data/delivery_time.csv")
 geo_customers = pd.read_csv("../data/geo_customers.csv")
 geo_sellers = pd.read_csv("../data/geo_sellers.csv")
 name_product = pd.read_csv("../data/name_product.csv")
